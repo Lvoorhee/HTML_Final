@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>LiveStrong Registration</title>
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="css/clean-blog.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="RegisterImage">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="nav">
+      <a class="navbar-brand" href="index.html"><img src="img/Logo.png"  class="logo"></a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="america.html">US Tours</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="europe.html">European Tours</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="link.html">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Exersise.html">Calorie Calculator</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Register.html">Register</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <div class="headermain">
+    <h1>
+        LiveStrong 
+    </h1>
+    <h3>
+        Registration
+    </h3>
+ </header>
+</div>
+</div>
+<div class="container">
+    <br>
+    <h2 style="text-align: center;">
+        Please fill out this form to register
+    </h2>
+<div class=form>
+    <form name="myForm" method="POST" action="http://leecottrell.com/phpclass/postback.php"> 
+        <div class="mb-3">
+            <label for="first_name" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="fname" name="fname" placeholder="John" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="last_name" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="lname" name="lname" placeholder="Smith" required>
+          </div>
+
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email" placeholder="JSmith@email.com" required>
+          
+        <div class="mb-3">
+            <br>
+            <label for="US_Tour" class=_form-label style="font-weight: bold;">US Tours</label>
+            <br>
+            <br>
+            Route 66:<br><input type="checkbox" class="form-control" name="usTour[]" value="route66">
+            <br>
+            Chesapeake Bay:<br><input type="checkbox" class="form-control" name="usTour[]" value="chesapeakebay">
+            <br>
+            Blue Ridge Parkway:<br><input type="checkbox" class="form-control" name="usTour[]" value="blueridgeparkway">
+            <br>
+            Civil War Campaign:<br><input type="checkbox" class="form-control" name="usTour[]" value="civilwarcampaign">
+            <br>
+            Alaskan Adventure:<br><input type="checkbox" class="form-control" name="usTour[]" value="alaskanadventure">
+            <br>
+            Moab Slick Road:<br><input type="checkbox" class="form-control" name="usTour[]" value="moabslickroad">
+        </div>
+        <div>
+            <br>
+            <label for="Europe_Tour" class=_form-label style="font-weight: bold;">European Tours</label>
+            <br>
+            <br>
+            Tour de France Preview:<br><input type="checkbox" class="form-control" name="europeTour[]" value="tourdefrancepreview">
+            Italian Wines Tour:<br><input type="checkbox" class="form-control" name="europeTour[]" value="italianwinestour">
+            English Channel:<br><input type="checkbox" class="form-control" name="europeTour[]" value="englishchannel">
+            Roman Antiquities:<br><input type="checkbox" class="form-control" name="europeTour[]" value="romanantiquities">
+            Swiss Alps:<br><input type="checkbox" class="form-control" name="europeTour[]" value="swissalps">
+            <br>
+        </div>
+        <div>
+            <label for="bike" class=_form-label style="font-weight:bold;">Bike</label>
+            <br>
+            Own:<input type="radio" clas="form-control" name="bicycle" value="ownBike">
+            <br>
+            Rent:<input type="radio" clas="form-control" name="bicycle" value="rentBike">
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+</div>
+</div>
+<footer>
+        <a href = "mailto: ljv3@gmail.com">ljv3@gmail.com</a>
+        <p> 1221 S Mo PAC </p>
+        <p>Expy Ste  320 </p>
+        <p>Austin, TX 78746 </p>
+        <script>
+            document.write("Last Modified On:" + document.lastModified);
+        </script>
+</footer>
+</div>
+<script>
+  
+</script>
+</body>

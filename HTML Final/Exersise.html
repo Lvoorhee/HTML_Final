@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Calorie Calculator</title>
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="css/clean-blog.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="exersisepicture">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+          <div class="nav">
+            <a class="navbar-brand" href="index.html"><img src="img/Logo.png" class="logo"></a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+              Menu
+              <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="america.html">US Tours</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="europe.html">European Tours</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="link.html">Shop</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Exersise.html">Calorie Calculator</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Register.html">Register</a>
+                </li>
+      
+              </ul>
+            </div>
+          </div>
+        </nav>
+           <!-- Page Header -->
+      <div class="headermain">
+        <h1>
+            American 
+        </h1>
+        <h3>
+            Cycling Tours
+        </h3>
+     </header>
+    </div>
+    </div>
+   
+    <div class="container"> 
+    <form>
+        <div class="form1">
+            <br>
+            <h2>How many calories do you burn a minute?</h2>
+        <fieldset>
+            <br>
+            <br>
+            <div class="box">
+          <label style="text-emphasis: bold" id="wvalue">
+            Enter weight in kg:
+          </label>
+          <input type="number" id="wValue" />
+        </fieldset>
+        <fieldset>
+            <div class="box2">
+            <label for="MET"  style="text-emphasis: bold">
+                Enter your riding style
+            </label>
+            <br>
+            <input type="radio" id="leisure" name="style" value="4">
+            <label for="style">Leisure Bicycling (under 10mph)</label>
+            <br>
+            <input type="radio" id="level2" name="style" value=6.8>
+            <label for="style">Bicycling (10-11.9mph)</label>
+            <br>
+            <input type="radio" id="level3" name="style" value="8">
+            <label for="style">Bicycling (12-13.9mph)</label>
+            <br>
+            <input type="radio" id="level4" name="style" value="10">
+            <label for="style">Bicycling (14-15.9mph)</label>
+            <br>
+            <input type="radio" id="level5" name="style" value="12">
+            <label for="style">Bicycling (16+ mph)</label>
+            <br>
+            <input type="radio" id="level6" name="style" value="8.5">
+            <label for="style">Mountain Biking</label>
+            <br>
+        </fieldset>
+        <fieldset>
+            <div class="box3">
+            <label  style="text-emphasis: bold" for="minutesbiking">
+                How many minutes have you biked?
+            </label>
+            <input type="number" name="minutesbiking" id="minutesbiking">
+        </fieldset>
+        <fieldset>
+          <button type="button" id="button">Convert to calories per minute (cpm)</button>
+        </fieldset>
+        <fieldset>
+           <p>Calories burnt per minute:</p>
+          <p id="calValue"></p>
+        </fieldset>
+        </div>
+   </form>
+   <footer>
+    <a href = "mailto: ljv3@gmail.com">ljv3@gmail.com</a>
+    <p> 1221 S Mo PAC </p>
+    <p>Expy Ste  320 </p>
+    <p>Austin, TX 78746 </p>
+    <script>
+        document.write("Last Modified On:" + document.lastModified);
+    </script>
+   </footer>
+</div>
+</div>
+ </article>
+ <script>
+    function convert() 
+    {
+       var Weight = document.getElementById("wvalue").value;
+       var CPM
+       var Minutes = document.getElementsByName("minutesbiking").value;
+        
+       if(document.getElementById("leisure").checked) {
+            CPM = ((4 * Weight*3.5)/200)*Minutes;
+        } else if(document.getElementById("level2").checked) {
+            CPM = ((6.8 * Weight * 3.5) / 200 ) * Minutes;
+        } else if(document.getElementById("level3").checked) {
+            CPM = ((8 * Weight * 3.5) / 200 ) * Minutes;
+        } else if(document.getElementById("level4").checked) {
+            CPM = ((10 * Weight * 3.5) / 200 ) * Minutes;
+        } else if(document.getElementById("level5").checked) {
+            CPM = ((12 * Weight * 3.5) / 200 ) * Minutes;
+        } else if(document.getElementById("level6").checked) {
+            CPM = ((8.5 * Weight * 3.5) / 200 ) * Minutes;
+        }
+       
+       document.getElementById("calValue").innerHTML = CPM;
+    }
+    document.getElementById("button").addEventListener("click", convert, false);
+ </script>
+  
+   
+
+</body>
+</html>
